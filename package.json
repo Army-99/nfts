@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "@chainlink/contracts": "^0.4.1",
-    "@openzeppelin/contracts": "^4.7.3"
+    "@openzeppelin/contracts": "^4.7.3",
+    "@pinata/sdk": "^1.1.26",
+    "path": "^0.12.7"
   }
 }
