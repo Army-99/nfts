@@ -18,13 +18,18 @@ const storeImages = async(imagesFilePath) => {
         }catch (err){
             console.err(err);
         }
-        res.push(readStream);
     }
     return {res, files};
 }
 
 const storeMetadata = async (metadata) => {
-
+    try{
+        const response = await pinata.pinJSONToIPFS(metadata)
+        return response;
+    }catch(err){
+        console.err(err);
+    }
+    return null;
 }
 
 module.exports = {storeImages, storeMetadata};
